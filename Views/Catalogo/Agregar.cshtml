@@ -1,0 +1,77 @@
+@model Catalogo.Models.Item
+
+@{
+    ViewData["Title"] = "Agregar motocicleta";
+}
+
+<section class="form-wrapper">
+    <a class="back-link" asp-action="Index">&larr; Volver al catálogo</a>
+
+    <div class="form-card">
+        <span class="eyebrow">Nuevo registro</span>
+        <h1>Agregar motocicleta</h1>
+        <p>Completá los datos para registrar una nueva moto en el catálogo oficial.</p>
+
+        <form asp-action="Agregar" method="post" class="app-form">
+            <div class="form-group">
+                <label asp-for="Marca">Marca</label>
+                <input asp-for="Marca" class="form-control" placeholder="Ej. Yamaha" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Modelo">Modelo</label>
+                <input asp-for="Modelo" class="form-control" placeholder="Ej. MT-07" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Ano">Año</label>
+                <input asp-for="Ano" class="form-control" type="number" placeholder="Ej. 2026" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Cilindrada">Cilindrada</label>
+                <input asp-for="Cilindrada" class="form-control" placeholder="Ej. 689 cc" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Precio">Precio</label>
+                <input asp-for="Precio" class="form-control" type="number" step="0.01" placeholder="Ej. 219900" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Categoria">Categoría</label>
+                <input asp-for="Categoria" class="form-control" placeholder="Ej. Naked" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ImagenUrl">URL de imagen</label>
+                <input asp-for="ImagenUrl" class="form-control" placeholder="https://images.unsplash.com/..." />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Potencia">Potencia</label>
+                <input asp-for="Potencia" class="form-control" placeholder="Ej. 73 HP" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Transmision">Transmisión</label>
+                <input asp-for="Transmision" class="form-control" placeholder="Ej. 6 velocidades" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Color">Color</label>
+                <input asp-for="Color" class="form-control" placeholder="Ej. Cyan Storm" />
+            </div>
+
+            <div class="form-group form-group-full">
+                <label asp-for="Descripcion">Descripción</label>
+                <textarea asp-for="Descripcion" class="form-control" rows="4" placeholder="Escribí una breve descripción de la motocicleta"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary-dark">Guardar motocicleta</button>
+                <a class="btn btn-secondary-dark" asp-action="Index">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</section>

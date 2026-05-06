@@ -1,0 +1,78 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<section class="hero-section">
+    <div class="hero-content">
+        <span class="eyebrow">Dk Agencia Distribuidora de Motos</span>
+        <h1>Catálogo<br>Premium<br><span class="hero-highlight">2026</span></h1>
+        <p>
+            Descubra las motocicletas más exclusivas del mercado. Yamaha, BMW, Ducati, Kawasaki,
+            Harley-Davidson y más. Financiamiento directo, entrega inmediata y garantía de agencia oficial.
+        </p>
+
+        <div class="hero-actions">
+            <a class="btn btn-primary-dark" asp-controller="Catalogo" asp-action="Index">
+                Explorar catálogo
+            </a>
+            <a class="btn btn-outline-light" href="#stats">
+                Ver más
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="hero-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=800"
+                 alt="Moto destacada DK"
+                 loading="eager" />
+            <div class="hero-glow"></div>
+        </div>
+    </div>
+</section>
+
+<section class="stats-bar" id="stats">
+    <div class="stat-item">
+        <span class="stat-number">20+</span>
+        <span class="stat-label">Modelos disponibles</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">10</span>
+        <span class="stat-label">Marcas representadas</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">2026</span>
+        <span class="stat-label">Catálogo actualizado</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Financiamiento</span>
+    </div>
+</section>
+
+<section class="brands-section">
+    <span class="eyebrow">Nuestras marcas</span>
+    <h2>Marcas oficiales</h2>
+
+    <div class="brands-grid">
+        <div class="brand-card">Yamaha</div>
+        <div class="brand-card">BMW</div>
+        <div class="brand-card">Ducati</div>
+        <div class="brand-card">Kawasaki</div>
+        <div class="brand-card">Honda</div>
+        <div class="brand-card">Suzuki</div>
+        <div class="brand-card">KTM</div>
+        <div class="brand-card">Triumph</div>
+        <div class="brand-card">Bajaj</div>
+        <div class="brand-card">Harley-Davidson</div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-card">
+        <span class="eyebrow">Contacto directo</span>
+        <h2>¿Listo para tu próxima moto?</h2>
+        <p>Solicitá una cotización sin compromiso. Nuestro equipo de asesores te guiará para encontrar la motocicleta ideal según tu estilo y presupuesto.</p>
+        <a class="btn btn-primary-dark" asp-controller="Catalogo" asp-action="Index">Ver catálogo completo</a>
+    </div>
+</section>

@@ -1,0 +1,64 @@
+@model List<Catalogo.Models.Item>
+
+@{
+    ViewData["Title"] = "Catálogo 2026";
+    string? marcaActual = ViewBag.MarcaActual as string;
+}
+
+<section class="page-heading">
+    <div>
+        <span class="eyebrow">Catálogo oficial</span>
+        <h1>Dk Motos 2026</h1>
+        <p>Explorá nuestra selección de motocicletas por marca, categoría y precio.</p>
+    </div>
+
+    <a class="btn btn-primary-dark" asp-action="Agregar">+ Agregar moto</a>
+</section>
+
+<section class="filter-panel">
+    <a class="filter-chip @(string.IsNullOrEmpty(marcaActual) ? "active" : "")" asp-action="Index">Todas</a>
+
+    @{
+        var marcas = ViewBag.Marcas as List<string>;
+    }
+
+    @if (marcas != null)
+    {
+        @foreach (var marca in marcas)
+        {
+            <a class="filter-chip @(marcaActual == marca ? "active" : "")" asp-action="Index" asp-route-marca="@marca">@marca</a>
+        }
+    }
+</section>
+
+<section class="catalog-grid">
+    @foreach (var item in Model)
+    {
+        <article class="moto-card">
+            <div class="moto-card-image">
+                <img src="@item.ImagenUrl" alt="@item.Marca @item.Modelo" loading="lazy" />
+                <span class="moto-badge">@item.Categoria</span>
+            </div>
+
+            <div class="moto-card-body">
+                <div class="moto-card-header">
+                    <span class="moto-brand">@item.Marca</span>
+                    <span class="moto-year">@item.Ano</span>
+                </div>
+
+                <h2>@item.Modelo</h2>
+
+                <div class="moto-specs">
+                    <span>@item.Cilindrada</span>
+                    <span class="spec-divider">&middot;</span>
+                    <span>@item.Potencia</span>
+                </div>
+
+                <div class="moto-card-footer">
+                    <span class="moto-price">$@item.Precio.ToString("N0")</span>
+                    <a asp-action="Detalle" asp-route-id="@item.Id">Ver detalle &rarr;</a>
+                </div>
+            </div>
+        </article>
+    }
+</section>
