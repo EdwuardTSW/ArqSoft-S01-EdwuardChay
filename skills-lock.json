@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "dark-mode-design": {
+      "source": "owl-listener/designer-skills",
+      "sourceType": "github",
+      "skillPath": "ui-design/skills/dark-mode-design/SKILL.md",
+      "computedHash": "6df4bb51ea8f87f5fe77b02d0876b610de47b47c19229ad7ddc663b5c09cb09e"
+    },
+    "interface-design": {
+      "source": "dammyjay93/interface-design",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/interface-design/SKILL.md",
+      "computedHash": "4d5fe1dacfebc0c1b3837b061405150ed2e4971c096543afc46c23161c5a4f7a"
+    }
+  }
+}
