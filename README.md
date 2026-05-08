@@ -29,34 +29,27 @@ Las siguientes secciones están reservadas para agregar capturas de pantalla del
 ### Página de inicio
 
 <!-- Agregar aquí la captura de la página de inicio -->
-![Página de inicio](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/82243fc4-321f-4d59-a38c-50019bd1d6ac" />
-)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/82243fc4-321f-4d59-a38c-50019bd1d6ac" />
 
 ### Catálogo de motocicletas
 
 <!-- Agregar aquí la captura del catálogo completo -->
-![Catálogo de motocicletas](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/085f95d6-26bc-4299-a9ae-c50d9222c984" />
-)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/085f95d6-26bc-4299-a9ae-c50d9222c984" />
 
 ### Filtro por marca
 
 <!-- Agregar aquí la captura del catálogo filtrado por marca -->
-![Filtro por marca](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/56b4bc67-68f9-4c2a-a3b0-9d5814673fae" />
-)
-
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/56b4bc67-68f9-4c2a-a3b0-9d5814673fae" />
 ### Detalle de motocicleta
 
 <!-- Agregar aquí la captura de la vista de detalle -->
-![Detalle de motocicleta](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c3ed8b17-73fc-454f-9343-88403af36d34" />
-)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c3ed8b17-73fc-454f-9343-88403af36d34" />
 
 ### Formulario para agregar motocicleta
 
 <!-- Agregar aquí la captura del formulario de registro de motocicleta -->
-![Formulario para agregar motocicleta](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/df37bd4c-77fe-40d4-9a9d-a33d2a6cecfd" />
-)
-![Formulario para agregar motocicleta](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/453e94ac-674e-474e-be2a-97a5f3d75aea" />
-)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/df37bd4c-77fe-40d4-9a9d-a33d2a6cecfd" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/453e94ac-674e-474e-be2a-97a5f3d75aea" />
 
 
 
