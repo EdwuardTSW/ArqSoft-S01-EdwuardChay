@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Acerca del proyecto";
+}
+
+<section class="about-wrapper">
+    <article class="about-card">
+        <span class="eyebrow">Práctica universitaria</span>
+        <h1>Acerca del proyecto</h1>
+        <p>
+            Este sistema fue desarrollado como una práctica académica para aplicar conceptos de desarrollo web con ASP.NET Core MVC.
+            La aplicación simula un catálogo digital de motocicletas para una agencia distribuidora, con enfoque en navegación,
+            formularios, vistas Razor, estilos personalizados y organización básica del proyecto.
+        </p>
+
+        <div class="about-grid">
+            <div class="about-feature">
+                <span>Objetivo</span>
+                <p>Presentar un catálogo funcional donde se puedan consultar, filtrar y registrar motocicletas.</p>
+            </div>
+
+            <div class="about-feature">
+                <span>Tecnologías</span>
+                <p>ASP.NET Core MVC, C#, Razor Views, Entity Framework Core, Bootstrap, jQuery y CSS personalizado.</p>
+            </div>
+
+            <div class="about-feature">
+                <span>Funcionalidades</span>
+                <p>Búsqueda, filtros, ordenamiento, vista de detalle, formulario de alta y validación de datos.</p>
+            </div>
+
+            <div class="about-feature">
+                <span>Alcance</span>
+                <p>El catálogo utiliza datos en memoria; la base de datos está configurada principalmente para autenticación.</p>
+            </div>
+        </div>
+
+        <div class="about-actions">
+            <a class="btn btn-primary-dark" asp-controller="Catalogo" asp-action="Index">Explorar catálogo</a>
+            <a class="btn btn-secondary-dark" asp-controller="Home" asp-action="Index">Volver al inicio</a>
+        </div>
+    </article>
+</section>

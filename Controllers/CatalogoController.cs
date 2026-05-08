@@ -294,16 +294,49 @@ namespace Catalogo.Controllers
             }
         };
 
-        public IActionResult Index(string? marca)
+        public IActionResult Index(string? marca, string? categoria, string? busqueda, string? orden)
         {
-            var resultado = string.IsNullOrEmpty(marca)
-                ? _items
-                : _items.Where(i => i.Marca == marca).ToList();
+            var resultado = _items.AsEnumerable();
+
+            if (!string.IsNullOrWhiteSpace(marca))
+            {
+                resultado = resultado.Where(i => i.Marca == marca);
+            }
+
+            if (!string.IsNullOrWhiteSpace(categoria))
+            {
+                resultado = resultado.Where(i => i.Categoria == categoria);
+            }
+
+            if (!string.IsNullOrWhiteSpace(busqueda))
+            {
+                resultado = resultado.Where(i =>
+                    i.Marca.Contains(busqueda, StringComparison.OrdinalIgnoreCase) ||
+                    i.Modelo.Contains(busqueda, StringComparison.OrdinalIgnoreCase) ||
+                    i.Categoria.Contains(busqueda, StringComparison.OrdinalIgnoreCase) ||
+                    i.Descripcion.Contains(busqueda, StringComparison.OrdinalIgnoreCase));
+            }
+
+            resultado = orden switch
+            {
+                "precio-asc" => resultado.OrderBy(i => i.Precio),
+                "precio-desc" => resultado.OrderByDescending(i => i.Precio),
+                "ano-asc" => resultado.OrderBy(i => i.Ano),
+                "ano-desc" => resultado.OrderByDescending(i => i.Ano),
+                _ => resultado.OrderBy(i => i.Marca).ThenBy(i => i.Modelo)
+            };
 
             ViewBag.Marcas = _items.Select(i => i.Marca).Distinct().OrderBy(m => m).ToList();
+            ViewBag.Categorias = _items.Select(i => i.Categoria).Distinct().OrderBy(c => c).ToList();
             ViewBag.MarcaActual = marca;
+            ViewBag.CategoriaActual = categoria;
+            ViewBag.BusquedaActual = busqueda;
+            ViewBag.OrdenActual = orden;
 
-            return View(resultado);
+            var lista = resultado.ToList();
+            ViewBag.TotalResultados = lista.Count;
+
+            return View(lista);
         }
 
         public IActionResult Detalle(int id)
@@ -321,7 +354,12 @@ namespace Catalogo.Controllers
         [HttpPost]
         public IActionResult Agregar(Item item)
         {
-            item.Id = _items.Max(i => i.Id) + 1;
+            if (!ModelState.IsValid)
+            {
+                return View(item);
+            }
+
+            item.Id = _items.Any() ? _items.Max(i => i.Id) + 1 : 1;
             _items.Add(item);
 
             return RedirectToAction("Index");
