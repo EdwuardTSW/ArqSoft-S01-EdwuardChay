@@ -40,6 +40,7 @@ Las siguientes secciones están reservadas para agregar capturas de pantalla del
 
 <!-- Agregar aquí la captura del catálogo filtrado por marca -->
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/56b4bc67-68f9-4c2a-a3b0-9d5814673fae" />
+
 ### Detalle de motocicleta
 
 <!-- Agregar aquí la captura de la vista de detalle -->
